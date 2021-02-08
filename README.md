@@ -1,6 +1,12 @@
-# project-demo
-### Install
+# Final Project Demo
+## Getting Started
 
+This repo is set up to use the [Parcel](https://parceljs.org/) bundler. If you don't
+like the way we've set things up, feel free to change it however you like!
+
+The only restriction is that __your final HTML/CSS/JS output must be stored in the "docs" folder__ so that
+GitHub knows how to serve it as a static site.
+### Install
 #### Required software
 
 You must have Node.js installed. You can get it directly from
@@ -12,6 +18,20 @@ Once you've got `node`, run the command `npm install` in this project folder
 and it will install all of the project-specific dependencies (if you're curious open up `package.json` to see where these are listed).
 
 npm is the _node package manager_.
+
+### Running the local dev server
+
+To run the project locally, run `npm start` and it will be available at http://localhost:1234/.
+
+### Building the final output
+
+Run `npm run build` and all of your assets will be compiled and placed into the `docs/` folder. Note
+that this command will overwrite the existing docs folder.
+
+If you are developing on a Windows machine, replace the `build` script in the `package.json` file with this:
+`parcel build src/index.html --no-minify --public-url https://cse412.github.io/project-demo; rm .\docs -r -fo; ren .\dist docs;`
+
+Once pushed to GitHub, the output should be available at cse412.github.io/your-repo-name/
 
 
 ## Other notes
@@ -26,3 +46,6 @@ list of dependencies in `package.json`.
 
 _Note that if you install a library your teammates will need to install it too. Once the dep is added
 to `package.json` simply running `npm install` in this directory will download the new dependency._
+
+#### Acknowledgements
+This README was adapted from a template created by Matthew Conlen for a previous offering of CSE 442
