@@ -49,8 +49,8 @@ that this command will overwrite the existing docs folder. You do not have to ma
 If you are developing on a Windows machine, replace the `build` script in the `package.json` file with this:
 `parcel build src/index.html --no-minify --public-url https://cse412.github.io/project-demo; rm .\docs -r -fo; ren .\dist docs;`
 
-Once pushed to GitHub, the output should be available at cse412.github.io/your-repo-name/. 
-For example, you can view the sample embedded Tableau, vega-lite, and d3 charts at https://cse412.github.io/project-demo/.
+Once pushed to GitHub, the output should be available at cse412-21w.github.io/your-repo-name/. 
+For example, you can view the sample embedded Tableau, vega-lite, and d3 charts at https://cse412-21w.github.io/project-demo/.
 
 
 ## Other notes
