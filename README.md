@@ -26,6 +26,17 @@ and it will install all of the project-specific dependencies (if you're curious 
 
 npm is the _node package manager_.
 
+### Local development
+Notice that the repository is setup with 3 folders: `src/`, `static/`, and `docs/`.
+
+`src/` is where all of your HTML/CSS/JS files should go. Feel free to add sub-folders to divide CSS and JavaScript files.
+
+`static/` is where you can place your data files. The Parcel static file plugin has been installed,
+so any files you put in the `static/` folder will be available over the network. See [this guide](https://gist.github.com/mathisonian/46eed3e6102888ddf741829fbbe262ff) for more information on loading data.
+
+`docs/` is the folder that contains the bundled HTML/CSS/JS that you will serve to your final public project site. See below for a more detailed explanation.
+
+
 ### Running the local dev server
 
 To run the project locally, run `npm start` and it will be available at http://localhost:1234/. When the server is running, any local change that you make will be detected by Parcel and your webpage will auto-update with the new changes. Your local changes will not be visible to your team members until you push the changes to your repository. These changes will not be reflected in the final website unless you run the build script and push the updated docs folder (see below).
@@ -33,7 +44,7 @@ To run the project locally, run `npm start` and it will be available at http://l
 ### Building the final output
 
 Run `npm run build` and all of your assets will be compiled and placed into the `docs/` folder. Note
-that this command will overwrite the existing docs folder. You do not have to manually create the `docs/` folder because everything will be handled in the build script. Parcel will bundle all assets in the `src/` folder and place then in a folder called `dist/`. Github Pages requires the folder name to be called `docs/`, so we move all assets from the `dist/` folder to the `docs/` folder for you. 
+that this command will overwrite the existing docs folder. You do not have to manually create the `docs/` folder because everything will be handled in the build script. Parcel will bundle all assets in the `src/` folder and place then in a folder called `dist/`. GitHub Pages requires the folder name to be called `docs/`, so we move all assets from the `dist/` folder to the `docs/` folder for you. 
 
 If you are developing on a Windows machine, replace the `build` script in the `package.json` file with this:
 `parcel build src/index.html --no-minify --public-url https://cse412.github.io/project-demo; rm .\docs -r -fo; ren .\dist docs;`
@@ -43,11 +54,6 @@ For example, you can view the sample embedded Tableau, vega-lite, and d3 charts 
 
 
 ## Other notes
-### Loading Data
-
-See [this guide](https://gist.github.com/mathisonian/46eed3e6102888ddf741829fbbe262ff). The Parcel static file plugin has been installed,
-so any files you put in the `static/` folder will be available over the network.
-
 ### Using 3rd party libraries
 
 You are more than welcome to use open source packages such as D3.js, just make sure to cite these.
