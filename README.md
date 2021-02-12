@@ -1,8 +1,15 @@
 # Final Project Demo
+## Team Members
+Place your team member names here.
+### Contribution Statements
+Add individual contribution statements here.
+## Project Proposal Abstract
+This is the space for you to add a description for your project.
+
 ## Getting Started
 
 This repo is set up to use the [Parcel](https://parceljs.org/) bundler. If you don't
-like the way we've set things up, feel free to change it however you like!
+like the way we've set things up, feel free to change it however you like! You are welcome to add, delete, rename, and replace any files contained here. You may also style and organize your final webpage however you would like. 
 
 The only restriction is that __your final HTML/CSS/JS output must be stored in the "docs" folder__ so that
 GitHub knows how to serve it as a static site.
@@ -21,12 +28,12 @@ npm is the _node package manager_.
 
 ### Running the local dev server
 
-To run the project locally, run `npm start` and it will be available at http://localhost:1234/.
+To run the project locally, run `npm start` and it will be available at http://localhost:1234/. When the server is running, any local change that you make will be detected by Parcel and your webpage will auto-update with the new changes. Your local changes will not be visible to your team members until you push the changes to your repository. These changes will not be reflected in the final website unless you run the build script and push the updated docs folder (see below).
 
 ### Building the final output
 
 Run `npm run build` and all of your assets will be compiled and placed into the `docs/` folder. Note
-that this command will overwrite the existing docs folder.
+that this command will overwrite the existing docs folder. You do not have to manually create the `docs/` folder because everything will be handled in the build script. Parcel will bundle all assets in the `src/` folder and place then in a folder called `dist/`. Github Pages requires the folder name to be called `docs/`, so we move all assets from the `dist/` folder to the `docs/` folder for you. 
 
 If you are developing on a Windows machine, replace the `build` script in the `package.json` file with this:
 `parcel build src/index.html --no-minify --public-url https://cse412.github.io/project-demo; rm .\docs -r -fo; ren .\dist docs;`
@@ -36,6 +43,10 @@ For example, you can view the sample embedded Tableau, vega-lite, and d3 charts 
 
 
 ## Other notes
+### Loading Data
+
+See [this guide](https://gist.github.com/mathisonian/46eed3e6102888ddf741829fbbe262ff). The Parcel static file plugin has been installed,
+so any files you put in the `static/` folder will be available over the network.
 
 ### Using 3rd party libraries
 
@@ -45,8 +56,8 @@ To add a new one run `npm install --save <library-name>`, e.g. `npm install --sa
 add the library locally so it is available for use in your JS files. It will also add `d3` to the
 list of dependencies in `package.json`.
 
-_Note that if you install a library your teammates will need to install it too. Once the dep is added
+_Note that if you install a library your teammates will need to install it too. Once the dependency is added
 to `package.json` simply running `npm install` in this directory will download the new dependency._
 
 #### Acknowledgements
-This README was adapted from a template created by Matthew Conlen for a previous offering of CSE 442
+This README was adapted from a [template](https://github.com/UW-CSE442-WI20/FP-Template) created by Matthew Conlen for a previous offering of CSE 442.
