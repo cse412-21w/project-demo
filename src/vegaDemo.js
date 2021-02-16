@@ -22,6 +22,7 @@ const options = {
       renderer: "canvas",
     },
 };
+
 vl.register(vega, vegaLite, options);
 
 // Again, We use d3.csv() to process data
@@ -46,8 +47,8 @@ function drawBarVegaLite() {
             vl.y().fieldQ('sunshine'),
             vl.tooltip(['sunshine']),
         )
-        .width(390)
-        .height(390)
+        .width(450)
+        .height(450)
         .render()
         .then(viewElement => {
           // render returns a promise to a DOM element containing the chart
