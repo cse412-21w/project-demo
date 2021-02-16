@@ -47,7 +47,7 @@ Run `npm run build` and all of your assets will be compiled and placed into the 
 that this command will overwrite the existing docs folder. You do not have to manually create the `docs/` folder because everything will be handled in the build script. Parcel will bundle all assets in the `src/` folder and place then in a folder called `dist/`. GitHub Pages requires the folder name to be called `docs/`, so we move all assets from the `dist/` folder to the `docs/` folder for you. 
 
 If you are developing on a Windows machine, replace the `build` script in the `package.json` file with this:
-`parcel build src/index.html --no-minify --public-url https://cse412.github.io/project-demo; rm .\docs -r -fo; ren .\dist docs;`
+`parcel build src/index.html --no-minify --public-url https://cse412-21w.github.io/project-demo & RD /S /Q .\\docs & ren .\\dist docs`
 
 Once pushed to GitHub, the output should be available at cse412-21w.github.io/your-repo-name/. 
 For example, you can view the sample embedded Tableau, vega-lite, and d3 charts at https://cse412-21w.github.io/project-demo/.
