@@ -2,11 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>CSE442FP: Knock On the Happiness Door</title>
+        <title>CSE 412 Project Demo</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <!-- For using d3 -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <!-- For using vega-lite -->
         <script src="https://cdn.jsdelivr.net/npm/vega"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite-api"></script>
@@ -16,7 +18,7 @@
 
     <body>
         <section class="title">
-            <a href="/">CSE 412 Demo Page</a>
+            <a href="/">CSE 412 Demo</a>
           </section>
         
           <section>
@@ -29,8 +31,10 @@
               <a href='https://courses.cs.washington.edu/courses/cse412/21wi/fp.html'>course website</a>.
             </p>
           </section>
+
+          
           <section id = "tableauDemo"> 
-            <h3>Min sunshine hours for the 6 cities in U.S.</h3>
+            <h3>Embed a Tableau Visualization:</h3>
             <div class='tableauPlaceholder' id='viz1612344209794' style='position: relative'>
               <noscript>
                 <a href='#'>
@@ -65,10 +69,12 @@
           </section>
         
           <section id = "vegaDemo">
+            <h3>Embed a Vega-Lite Visualization:</h3>
             <div id="view"></div>
           </section>
         
           <section id = "d3Demo">
+            <h3>Embed a D3 Visualization:</h3>
             <div id="d3-demo"></div>
           </section>
 
@@ -76,6 +82,9 @@
             <a href="https://courses.cs.washington.edu/courses/cse442/20au/">CSE 412 Data Visualization</a>
             <a href="http://www.washington.edu">University of Washington</a>
           </div>
+
+    <!-- it is recommended to put js files before </body> -->
+    <!-- or check load event fot addEventListener() if you want to put js in the <head> -->
     <script src="d3-demo.js"></script>
     <script src="vegaDemo.js"></script>
     </body>

@@ -2,7 +2,6 @@ import sunshineData from '../static/sunshine.csv'    // import dataset
 "use strict";     // the code should be executed in "strict mode".
                   // With strict mode, you can not, for example, use undeclared variables
 
-
 var line_svg;    // used for svg later
 var colorSet;    // used for color scheme later
 var sunshineArray = [];   // used to store data later
