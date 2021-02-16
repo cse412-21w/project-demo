@@ -38,22 +38,5 @@ d3.csv(sunshineData).then(function(data) {
 
 
 function drawBarVegaLite() {
-  // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
-  // your visualization goes here
-  vl.markBar({filled:true, color:'teal'})
-  .data(sunshineArray)
-  .encode(
-      vl.x().fieldN('month').sort('none'),
-      vl.y().fieldQ('sunshine'),
-      vl.tooltip(['sunshine']),
-  )
-  .width(450)
-  .height(450)
-  .render()
-  .then(viewElement => {
-    // render returns a promise to a DOM element containing the chart
-    // viewElement.value contains the Vega View object instance
-    document.getElementById('view').appendChild(viewElement);
-  });
 }
   
