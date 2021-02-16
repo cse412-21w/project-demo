@@ -16,9 +16,9 @@ const options = {
   view: {
     // view constructor options
     // remove the loader if you don't want to default to vega-datasets!
-  //   loader: vega.loader({
-  //     baseURL: "",
-  //   }),
+    //   loader: vega.loader({
+    //     baseURL: "",
+    //   }),
     renderer: "canvas",
   },
 };
