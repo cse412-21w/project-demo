@@ -38,5 +38,18 @@ d3.csv(sunshineData).then(function(data) {
 
 
 function drawBarVegaLite() {
+  vl.markBar({filled:true, color:'teal'})
+    .data(sunshineArray)
+    .encode(
+      vl.x().fieldN('month').sort('none'),
+      vl.y().fieldQ('sunshine'),
+      vl.tooltip('sunshine')
+    )
+    .width(500)
+    .height(500)
+    .render()
+    .then(viewElement => {
+      document.getElementById("view").appendChild(viewElement);
+    })
 }
   
