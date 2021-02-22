@@ -42,12 +42,16 @@ so any files you put in the `static/` folder will be available over the network.
 To run the project locally, run `npm start` and it will be available at http://localhost:1234/. When the server is running, any local change that you make will be detected by Parcel and your webpage will auto-update with the new changes. Your local changes will not be visible to your team members until you push the changes to your repository. These changes will not be reflected in the final website unless you run the build script and push the updated docs folder (see below).
 
 ### Building the final output
+Linux/Unix machines:
+
+In the `build` script in your `package.json` file, modify the public URL parameter to be the URL of your project repo: `parcel build src/index.html --no-minify --public-url https://cse412-21w.github.io/your-repo-name` replacing `your-repo-name` with your repository name.
 
 Run `npm run build` and all of your assets will be compiled and placed into the `docs/` folder. Note
 that this command will overwrite the existing docs folder. You do not have to manually create the `docs/` folder because everything will be handled in the build script. Parcel will bundle all assets in the `src/` folder and place then in a folder called `dist/`. GitHub Pages requires the folder name to be called `docs/`, so we move all assets from the `dist/` folder to the `docs/` folder for you. 
 
 If you are developing on a Windows machine, replace the `build` script in the `package.json` file with this:
-`parcel build src/index.html --no-minify --public-url https://cse412-21w.github.io/project-demo & RD /S /Q .\\docs & ren .\\dist docs`
+Make sure to replace `your-repo-name` with your repository name!
+`parcel build src/index.html --no-minify --public-url https://cse412-21w.github.io/your-repo-name & RD /S /Q .\\docs & ren .\\dist docs`
 
 Once pushed to GitHub, the output should be available at cse412-21w.github.io/your-repo-name/. 
 For example, you can view the sample embedded Tableau, vega-lite, and d3 charts at https://cse412-21w.github.io/project-demo/.
