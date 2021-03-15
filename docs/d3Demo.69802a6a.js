@@ -175,12 +175,10 @@ function drawLineD3() {
   y.domain(d3.extent(sunshineArray, function (d) {
     return parseFloat(d.sunshine);
   }));
-  line_svg = d3.select("#d3-demo").append('svg').attr("id", "line-chart").attr("width", w + margin.left + margin.right + legendSpace).attr("height", h + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); // append x axis
-
-  line_svg.append("g").attr("transform", "translate(0," + h + ")").attr("class", "myXaxis").call(xAxis); // append y axis
-
+  line_svg = d3.select('#d3-demo').append('svg').attr("id", "line-chart").attr("width", w + margin.left + margin.right + legendSpace).attr("height", h + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+  line_svg.append("g").attr("transform", "translate(0," + h + ")").attr("class", "myXaxis").call(xAxis);
   line_svg.append("g").attr("class", "myYaxis").call(yAxis);
-  var paths = line_svg.append("g").attr("id", "paths-group");
+  var path = line_svg.append('g').attr("id", "paths-group");
   var line = d3.line().x(function (d) {
     return x(d3.timeParse("%b")(d.month));
   }).y(function (d) {
@@ -190,9 +188,8 @@ function drawLineD3() {
     var currentCity = sunshineArray.filter(function (e) {
       return e.city === d;
     });
-    paths.append("path").datum(currentCity).attr("class", "lines").attr('d', line).style("stroke-width", 2.5).style("fill", "none").attr("stroke", colorSet(d));
-  }); // add legend
-
+    path.append("path").datum(currentCity).attr("class", "lines").attr('d', line).style("stroke-width", 2.5).style("fill", "none").attr("stroke", colorSet(d));
+  });
   var legend = line_svg.append('g').attr("id", "legend-group");
   legend.selectAll("rect").data(citySet).join("rect").attr("class", "legends").attr("x", 600).attr("y", function (d) {
     return 25 + 30 * citySet.indexOf(d);
@@ -233,7 +230,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57941" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57311" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

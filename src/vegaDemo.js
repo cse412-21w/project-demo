@@ -1,4 +1,8 @@
 import sunshineData from '../static/sunshine.csv'    // import dataset
+var vl = require('vega-lite-api');
+var vegaLite = require('vega-lite');
+var vega = require('vega');
+var vegaTooltip = require('vega-tooltip');
 "use strict";     // the code should be executed in "strict mode".
                   // With strict mode, you can not, for example, use undeclared variables
 
